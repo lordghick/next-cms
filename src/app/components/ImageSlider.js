@@ -61,7 +61,7 @@ export default async function ImageSlider({ articulo }) {
             href="/"
             className="font-medium bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-400 transition-colors flex gap-2 items-center max-w-[180px]"
           >
-            Continue reading <RiArrowRightSLine className="mt-1" />{" "}
+            Continue reading <RiArrowRightSLine className="mt-2" />{" "}
           </Link>
         </div>
       </div>
