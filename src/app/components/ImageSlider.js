@@ -3,12 +3,12 @@ import React from "react";
 import { RiArrowRightSLine } from "react-icons/ri";
 import getCategories from "../getcategories";
 import Image from "next/image";
+import BtnContinue from "./BtnContinue";
 
 
 export default async function ImageSlider({ articulo }) {
   const categoria = await getCategories(articulo.categories);
   return (
-    <div>
       <div className="flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8">
         <div className="w-full lg:w-1/2 h-[300px] md:min-h-[450px]">
           <Link href="/">
@@ -36,11 +36,11 @@ export default async function ImageSlider({ articulo }) {
           </h2>
 
           <div className="flex items-center">
-            {/* <img
-              className="w-10 h-10 rounded-full mr-2 object-cover"
+            <img
+              className="w-10 h-10 rounded-full mr-2 object-cover border-4 border-blue-500"
               src="https://aishlatino.com/wp-content/uploads/2021/11/que-tipo-de-persona-te-gustaria-ser-730x411-SP.jpg"
               alt="Avatar of Jonathan Reinink"
-            /> */}
+            />
             <div className="text-sm">
               <p id="autor" className="text-gray-600 leading-none">
                 by <span className="font-bold">Laura Adans</span>
@@ -56,17 +56,10 @@ export default async function ImageSlider({ articulo }) {
             {articulo.excerpt.rendered}
           </p>
 
-          <Link
-            title="continue reading"
-            href="/"
-            className="font-medium bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-400 transition-colors flex gap-2 items-center max-w-[180px]"
-          >
-            Continue reading <RiArrowRightSLine className="mt-2" />{" "}
-          </Link>
+          <BtnContinue/>
         </div>
       </div>
-    </div>
   );
 }
 
-// Continue reading <RiArrowRightSLine className="mt-1" />{" "}
+

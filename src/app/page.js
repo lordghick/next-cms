@@ -22,7 +22,7 @@ async function page() {
 	const articulo = data[0]	
 
 	return (
-		<div className='bg-gray-100 min-h-screen'>
+		<div className='bg-gray-200 min-h-screen'>
 			<Header />
 
 			<div className='container max-w-sm md:max-w-2xl lg:max-w-6xl bg-white mx-auto my-8 shadow-lg min-h-[450px] rounded-lg p-2'>
