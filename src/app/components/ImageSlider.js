@@ -2,10 +2,12 @@ import Link from "next/link";
 import React from "react";
 import getCategories from "../getcategories";
 import BtnContinue from "./BtnContinue";
+import getUsers from '../getUsers'
 
 
 export default async function ImageSlider({ articulo }) {
   const categoria = await getCategories(articulo.categories);
+  const user = await getUsers(articulo.author)
   let excerpt = { __html: `${articulo.excerpt.rendered}` }
   return (
       <div className="flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8">
@@ -42,7 +44,7 @@ export default async function ImageSlider({ articulo }) {
             />
             <div className="text-sm">
               <p id="autor" className="text-gray-600 leading-none">
-                by <span className="font-bold">Laura Adans</span>
+                by <span className="font-bold">{articulo.author}</span>
               </p>
               <p id="date" className="text-gray-600"></p>
             </div>

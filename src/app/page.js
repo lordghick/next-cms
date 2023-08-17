@@ -1,7 +1,4 @@
-// import ImageSlider from "../components/ImageSlider";
-
 import Link from 'next/link'
-
 import Header from './components/Header'
 import ImageSlider from './components/ImageSlider'
 import { RiArrowRightSLine } from 'react-icons/ri'
