@@ -8,13 +8,13 @@ export default async function Card({articulo}) {
   let excerpt = { __html: `${articulo.excerpt.rendered}` }
   return (
     <div className="flex flex-col justify-between min-h-[600px] max-h-[600px]">
-      <div className="w-full h-full rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-300 transition-color cursor-pointer duration-300">
+      <div className="w-full h-full flex flex-col rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-300 transition-color cursor-pointer duration-300">
         <img
           className="w-full rounded-lg min-h-[250px]"
           src="https://www.imagethread.com/koken/storage/cache/images/000/033/marker-landscape-d10,medium.2x.1475998338.jpg"
           alt="Sunset in the mountains"
         />
-        <div className="py-4 pl-20 pr-4 relative">
+        <div className="py-4 pl-20 pr-4 relative flex flex-col justify-between">
           <h3 className="font-bold text-xl mb-2">{articulo.title.rendered}</h3>
 
           <div className="text-sm my-4">
@@ -24,7 +24,9 @@ export default async function Card({articulo}) {
             <p className="text-gray-600">Aug 18, 2022</p>
           </div>
 
-          <p dangerouslySetInnerHTML={excerpt} className="text-gray-400 text-md text-justify pb-4 border-b-2 border-gray-300">
+          <div></div>
+
+          <p dangerouslySetInnerHTML={excerpt} className="text-gray-400 text-md text-justify pb-4">
         
           </p>
 
