@@ -25,7 +25,7 @@ async function page() {
 		<div className='bg-gray-200 min-h-screen'>
 			<Header />
 
-			<div className='container max-w-sm md:max-w-2xl lg:max-w-6xl bg-white mx-auto my-8 shadow-lg min-h-[450px] rounded-lg p-2'>
+			<div className='container max-w-sm md:max-w-2xl lg:max-w-6xl bg-white cursor-pointer duration-300 mx-auto my-8 shadow-lg min-h-[450px] rounded-lg p-2'>
 				<ImageSlider articulo={articuloPortada} />
 			</div>
 
@@ -41,7 +41,7 @@ async function page() {
 			<div className='container max-w-6xl mx-auto flex items-center justify-center pb-8'>
 				<Link
 					href='/'
-					className='flex items-center gap-1 bg-black px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition-colors duration-300  text-yellow-500 uppercase font-bold'
+					className='flex items-center gap-1 font-medium bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-400 transition-colors'
 				>
 					Older Post <RiArrowRightSLine />
 				</Link>
@@ -53,7 +53,7 @@ async function page() {
 
 				<Link
 					href='/'
-					className='flex items-center gap-1 bg-black px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition-colors duration-300'
+					className='flex items-center gap-1 font-medium bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-400 transition-colors'
 				>
 					Subscribe <RiSendPlaneFill />
 				</Link>

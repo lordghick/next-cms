@@ -50,7 +50,7 @@ export default async function ImageSlider({ articulo }) {
 
           <p dangerouslySetInnerHTML={excerpt}
             id="sinopsis"
-            className="text-gray-400 text-lg font-semibold pb-4 border-b-2 border-gray-300"
+            className="text-gray-400 text-lg font-semibold pb-4"
           >
           </p>
 
