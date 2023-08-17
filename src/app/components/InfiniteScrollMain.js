@@ -16,7 +16,7 @@ async function InfiniteScrollMain({ articulos }) {
       </div>
 
       <aside className="lg:col-start-3">
-        <Aside />
+        <Aside articulos={articulos} />
       </aside>
     </main>
   );

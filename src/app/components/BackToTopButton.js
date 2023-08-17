@@ -9,7 +9,7 @@ function BackToTopButton() {
       return (
         <button
           onClick={scrollToTop}
-          className="p-2 border-2 border-slate-500 hover:border-slate-700 text-slate-500 hover:text-white hover:bg-slate-700 rounded-full transition-all">Back to Top
+          className="font-medium bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-400 transition-colors">Back to Top
         </button>
   );
 }
