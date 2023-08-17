@@ -1,18 +1,21 @@
 import Link from "next/link";
 import React from "react";
 import { RiArrowRightSLine } from "react-icons/ri";
+import BtnContinue from "./BtnContinue";
 
-export default function Card() {
+export default async function Card({articulo}) {
+  console.log(`titulo nuevo: ${articulo.title}`)
+  let excerpt = { __html: `${articulo.excerpt.rendered}` }
   return (
-    <div className="flex max-h-[590px]">
-      <div class="w-full rounded-lg overflow-hidden shadow-lg p-3 bg-white">
+    <div className="flex flex-col justify-between min-h-[600px] max-h-[600px]">
+      <div className="w-full h-full rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-300 transition-color cursor-pointer duration-300">
         <img
-          class="w-full rounded-lg min-h-[250px]"
+          className="w-full rounded-lg min-h-[250px]"
           src="https://www.imagethread.com/koken/storage/cache/images/000/033/marker-landscape-d10,medium.2x.1475998338.jpg"
           alt="Sunset in the mountains"
         />
-        <div class="py-4 pl-20 pr-4 relative">
-          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <div className="py-4 pl-20 pr-4 relative">
+          <h3 className="font-bold text-xl mb-2">{articulo.title.rendered}</h3>
 
           <div className="text-sm my-4">
             <p className="text-gray-600 leading-none">
@@ -21,17 +24,11 @@ export default function Card() {
             <p className="text-gray-600">Aug 18, 2022</p>
           </div>
 
-          <p class="text-gray-400 text-md text-justify pb-4 border-b-2 border-gray-300">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla!
+          <p dangerouslySetInnerHTML={excerpt} className="text-gray-400 text-md text-justify pb-4 border-b-2 border-gray-300">
+        
           </p>
 
-          <Link
-            href="/"
-            className="text-gray-400 font-medium hover:text-gray-500 transition-all flex items-center mt-4"
-          >
-            Continue reading <RiArrowRightSLine className="mt-1" />{" "}
-          </Link>
+          <BtnContinue/>
 
           <div className="flex flex-col items-center gap-2 absolute top-0 left-0 pl-4 mt-[-24px]">
             <img
@@ -61,7 +58,7 @@ export default function Card() {
           </div>
         </div>
 
-        <div class="px-6 pt-4 pb-2 hidden lg:flex">
+        <div classNane="px-6 pt-4 pb-2 hidden xl:flex">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
             #photography
           </span>

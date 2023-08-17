@@ -19,14 +19,14 @@ export const metadata = {
 async function page() {
 	const data = await getPosts()
 
-	const articulo = data[0]	
+	const articuloPortada = data[0];	
 
 	return (
 		<div className='bg-gray-200 min-h-screen'>
 			<Header />
 
 			<div className='container max-w-sm md:max-w-2xl lg:max-w-6xl bg-white mx-auto my-8 shadow-lg min-h-[450px] rounded-lg p-2'>
-				<ImageSlider articulo={articulo} />
+				<ImageSlider articulo={articuloPortada} />
 			</div>
 
 			<div className='container px-4 md:px-0 max-w-sm md:max-w-2xl lg:max-w-6xl mx-auto mb-8'>
@@ -36,7 +36,7 @@ async function page() {
 
 			{/* main */}
 
-			<InfiniteScrollMain />
+			<InfiniteScrollMain articulos={data} />
 
 			<div className='container max-w-6xl mx-auto flex items-center justify-center pb-8'>
 				<Link

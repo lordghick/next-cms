@@ -1,13 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { RiArrowRightSLine } from "react-icons/ri";
 import getCategories from "../getcategories";
-import Image from "next/image";
 import BtnContinue from "./BtnContinue";
 
 
 export default async function ImageSlider({ articulo }) {
   const categoria = await getCategories(articulo.categories);
+  let excerpt = { __html: `${articulo.excerpt.rendered}` }
   return (
       <div className="flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8">
         <div className="w-full lg:w-1/2 h-[300px] md:min-h-[450px]">
@@ -49,11 +48,10 @@ export default async function ImageSlider({ articulo }) {
             </div>
           </div>
 
-          <p
+          <p dangerouslySetInnerHTML={excerpt}
             id="sinopsis"
             className="text-gray-400 text-lg font-semibold pb-4 border-b-2 border-gray-300"
           >
-            {articulo.excerpt.rendered}
           </p>
 
           <BtnContinue/>

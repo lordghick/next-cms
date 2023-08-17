@@ -10,7 +10,6 @@ import {
 
 function Aside() {
   return (
-    <>
       <aside className=" flex flex-col bg-white rounded-lg overflow-hidden shadow-lg p-3">
         <div className="container mx-auto mb-4">
           <p className="text-gray-400 text-sm">Chosen by the editor</p>
@@ -120,7 +119,6 @@ function Aside() {
           </span>
         </div>
       </aside>
-    </>
   );
 }
 
