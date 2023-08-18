@@ -11,7 +11,7 @@ export default async function getCategories(categoria) {
 	}
 
 	data = await res.json()
-	const indexCategoria = data.findIndex((type) => type.id == categoria)
+	const indexCategoria = data.findIndex((item) => item.id == categoria)
 	const nombreCategoria = data[indexCategoria].name;
 	return nombreCategoria
 }

@@ -11,9 +11,8 @@ export default async function getUsers(user) {
 	}
 
 	data = await res.json()
-	const indexUser = data.findIndex((type) => type.id == user)
+	const indexUser = data.findIndex((item) => item.id == user)
 	const userName = data[indexUser].name;
 
-	console.log(`----- AQUI ${userName}`)
 	return userName
 }

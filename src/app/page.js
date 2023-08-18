@@ -45,8 +45,8 @@ async function page() {
 			</div>
 
 			<div className='shadow-lg container max-w-6xl mx-auto min-h-[300px] mb-8 bg-[url(https://cdna.artstation.com/p/assets/images/images/029/181/430/4k/anthony-catillaz-untitled-2.jpg?1596708920)] bg-no-repeat bg-cover bg-bottom rounded-lg border-8 border-white flex flex-col items-center justify-center gap-6 text-yellow-500 uppercase font-bold'>
-				<h4 className='text-2xl'>Stay in the Loop</h4>
-				<p className='text-lg'>Subscribe to my newsletter for all the latest updates</p>
+				<h4 className='text-2xl '>Stay in the Loop</h4>
+				<p className='text-md text-center'>Subscribe to my newsletter for all the latest updates</p>
 
 				<Link
 					href='/'

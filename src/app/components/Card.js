@@ -5,7 +5,7 @@ import BtnContinue from "./BtnContinue";
 
 export default async function Card({articulo}) {
   console.log(`titulo nuevo: ${articulo.title}`)
-  let excerpt = { __html: `${articulo.excerpt.rendered}` }
+  let excerpt = { __html: articulo.excerpt.rendered }
   return (
     <div className="flex flex-col justify-between min-h-[600px] max-h-[600px]">
       <div className="w-full h-full flex flex-col rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-300 transition-color cursor-pointer duration-300">
@@ -24,7 +24,7 @@ export default async function Card({articulo}) {
             <p className="text-gray-600">Aug 18, 2022</p>
           </div>
 
-          <div></div>
+          
 
           <p dangerouslySetInnerHTML={excerpt} className="text-gray-400 text-md text-justify pb-4">
         

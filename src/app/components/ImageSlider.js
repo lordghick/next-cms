@@ -46,7 +46,7 @@ export default async function ImageSlider({ articulo }) {
               <p id="autor" className="text-gray-600 leading-none">
                 by <span className="font-bold">{user}</span>
               </p>
-              <p id="date" className="text-gray-600">{articulo.date}</p>
+              <p id="date" className="text-gray-600">{articulo.user}</p>
             </div>
           </div>
 
