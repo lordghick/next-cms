@@ -14,9 +14,9 @@ export const metadata = {
 }
 
 async function page() {
-	const data = await getPosts()
+	const articulos = await getPosts()
 
-	const articuloPortada = data[0];	
+	const articuloPortada = articulos[0];	
 
 	return (
 		<div className='bg-gray-200 min-h-screen'>
@@ -33,7 +33,7 @@ async function page() {
 
 			{/* main */}
 
-			<InfiniteScrollMain articulos={data} />
+			<InfiniteScrollMain articulos={articulos} />
 
 			<div className='container max-w-6xl mx-auto flex items-center justify-center pb-8'>
 				<Link

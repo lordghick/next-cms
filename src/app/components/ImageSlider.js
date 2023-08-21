@@ -1,14 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import getCategories from "../getcategories";
 import BtnContinue from "./BtnContinue";
-import getUsers from '../getUsers'
 
 
 export default async function ImageSlider({ articulo }) {
-  const categoria = await getCategories(articulo.categories);
-  const user = await getUsers(articulo.author)
-  let excerpt = { __html: `${articulo.excerpt.rendered}` }
+  let excerpt = { __html: `${articulo.excerpt}` }
   return (
       <div className="flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8">
         <div className="w-full lg:w-1/2 h-[300px] md:min-h-[450px]">
@@ -26,14 +22,14 @@ export default async function ImageSlider({ articulo }) {
             id="categoria"
             className="font-bold text-white bg-cyan-900 min-w-[70px] max-w-[100px] text-center rounded-xl uppercase text-xs px-2 py-1"
           >
-            {categoria}
+            {articulo.categories}
           </span>
 
           <h2
             id="titulo"
             className="text-slate-900 text-2xl md:text-4xl font-semibold"
           >
-            {articulo.title.rendered}
+            {articulo.title}
           </h2>
 
           <div className="flex items-center">
@@ -44,9 +40,9 @@ export default async function ImageSlider({ articulo }) {
             />
             <div className="text-sm">
               <p id="autor" className="text-gray-600 leading-none">
-                by <span className="font-bold">{user}</span>
+                by <span className="font-bold">{articulo.user}</span>
               </p>
-              <p id="date" className="text-gray-600">{articulo.user}</p>
+              <p id="date" className="text-gray-600">test date</p>
             </div>
           </div>
 

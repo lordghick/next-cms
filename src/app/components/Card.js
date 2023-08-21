@@ -4,8 +4,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import BtnContinue from "./BtnContinue";
 
 export default async function Card({articulo}) {
-  console.log(`titulo nuevo: ${articulo.title}`)
-  let excerpt = { __html: articulo.excerpt.rendered }
+  let excerpt = { __html: articulo.excerpt }
   return (
     <div className="flex flex-col justify-between min-h-[600px] max-h-[600px]">
       <div className="w-full h-full flex flex-col rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-300 transition-color cursor-pointer duration-300">
@@ -15,11 +14,11 @@ export default async function Card({articulo}) {
           alt="Sunset in the mountains"
         />
         <div className="py-4 pl-20 pr-4 relative flex flex-col justify-between">
-          <h3 className="font-bold text-xl mb-2">{articulo.title.rendered}</h3>
+          <h3 className="font-bold text-xl mb-2">{articulo.title}</h3>
 
           <div className="text-sm my-4">
             <p className="text-gray-600 leading-none">
-              by <span className="font-bold">Laura Adans</span>
+              by <span className="font-bold">{articulo.user}</span>
             </p>
             <p className="text-gray-600">Aug 18, 2022</p>
           </div>
