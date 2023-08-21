@@ -30,25 +30,25 @@ function Aside({ articulos }) {
       <div className="hidden md:flex lg:flex-col justify-center gap-2">
         <Link
           href="/"
-          className="flex items-center gap-2 text-white bg-cyan-700 hover:bg-cyan-800 transition-all px-4 py-2 rounded-full"
+          className="flex items-center gap-2 text-white bg-[#3b5998] hover:bg-[#3b5998]/90 transition-all px-4 py-2 rounded-full"
         >
           <RiFacebookCircleFill className="text-xl" /> Facebook
         </Link>
         <Link
           href="/"
-          className="flex items-center gap-2 text-white bg-cyan-600 hover:bg-cyan-700 transition-all px-4 py-2 rounded-full"
+          className="flex items-center gap-2 text-white bg-[#00acee] hover:bg-[#00acee]/90 transition-all px-4 py-2 rounded-full"
         >
           <RiTwitterFill className="text-xl" /> Twitter
         </Link>
         <Link
           href="/"
-          className="flex items-center gap-2 text-white bg-black hover:bg-gray-800 transition-all px-4 py-2 rounded-full"
+          className="flex items-center gap-2 text-white bg-black hover:bg-black/80 transition-all px-4 py-2 rounded-full"
         >
           <RiTiktokFill className="text-xl" /> Tik Tok
         </Link>
         <Link
           href="/"
-          className="flex items-center gap-2 text-white bg-amber-600 hover:bg-amber-700 transition-all px-4 py-2 rounded-full"
+          className="flex items-center gap-2 text-white bg-[#ff4500] bg-[#ff4500]/90 transition-all px-4 py-2 rounded-full"
         >
           <RiRedditFill className="text-xl" /> Reddit
         </Link>

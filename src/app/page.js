@@ -3,16 +3,12 @@ import Header from "./components/Header";
 import ImageSlider from "./components/ImageSlider";
 import { RiArrowRightSLine } from "react-icons/ri";
 import {
-  RiFacebookCircleFill,
-  RiTwitterFill,
-  RiTiktokFill,
-  RiRedditFill,
   RiSendPlaneFill,
 } from "react-icons/ri";
-import BackToTopButton from "./components/BackToTopButton";
 import InfiniteScrollMain from "./components/InfiniteScrollMain";
 
 import getPosts from "./getposts";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Home",
@@ -50,7 +46,7 @@ async function page() {
         </Link>
       </div>
 
-      <div className="shadow-lg container max-w-6xl mx-auto min-h-[300px] mb-8 bg-[url(https://cdna.artstation.com/p/assets/images/images/029/181/430/4k/anthony-catillaz-untitled-2.jpg?1596708920)] bg-no-repeat bg-cover bg-bottom rounded-lg border-8 border-white flex flex-col items-center justify-center gap-6 text-yellow-500 uppercase font-bold">
+      <div className="shadow-lg container max-w-6xl mx-auto min-h-[300px] mb-8 bg-gray-500 rounded-lg border-8 border-white flex flex-col items-center justify-center gap-6 text-yellow-500 uppercase font-bold">
         <h4 className="text-2xl ">Stay in the Loop</h4>
         <p className="text-md text-center">
           Subscribe to my newsletter for all the latest updates
@@ -64,30 +60,8 @@ async function page() {
         </Link>
       </div>
 
-      <footer className="bg-white min-h-[100px] w-full border-2 flex items-center justify-center">
-        <div className="container max-w-6xl mx-auto flex items-center justify-evenly text-sm text-slate-500">
-          <p className="text-sm">
-            © 2023 FrontEnd by Freddy S, BackEnd by Leonardo L
-          </p>
+      <Footer/>
 
-          <div className="flex items-center gap-2">
-            <Link href="/" className="hover:text-slate-700 transition-all">
-              <RiFacebookCircleFill className="text-xl" />
-            </Link>
-            <Link href="/" className="hover:text-slate-700 transition-all">
-              <RiTwitterFill className="text-xl" />
-            </Link>
-            <Link href="/" className="hover:text-slate-700 transition-all">
-              <RiTiktokFill className="text-xl" />
-            </Link>
-            <Link href="/" className="hover:text-slate-700 transition-all">
-              <RiRedditFill className="text-xl" />
-            </Link>
-          </div>
-
-          <BackToTopButton />
-        </div>
-      </footer>
     </div>
   );
 }

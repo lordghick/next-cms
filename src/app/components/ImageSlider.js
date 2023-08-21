@@ -22,7 +22,7 @@ export default async function ImageSlider({ articulo }) {
       <div className="lg:w-1/2 min-h-[450px] flex flex-col justify-evenly px-4 lg:pr-4">
         <span
           id="categoria"
-          className="font-bold text-white bg-cyan-900 min-w-[70px] max-w-[100px] text-center rounded-xl uppercase text-xs px-2 py-1"
+          className="font-bold text-white bg-blue-500 min-w-[70px] max-w-[100px] text-center rounded-xl uppercase text-xs px-2 py-1"
         >
           {articulo.categories}
         </span>

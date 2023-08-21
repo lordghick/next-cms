@@ -12,7 +12,7 @@ export default async function Card({ articulo }) {
   return (
     <Link href="/" className="flex items-center justify-center min-h-[550px]">
       <div className="w-full h-full flex flex-col rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-100 transition-color duration-300">
-        <div className="flex w-full rounded-lg min-h-[200px]">
+        <div className="flex w-full rounded-lg md:min-h-1/2 lg:min-h-[200px]">
           <Image
             src={coverImage}
             alt=""
