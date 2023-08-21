@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { RiMenuLine } from "react-icons/ri";
 
 function Header() {
   return (

@@ -47,10 +47,31 @@ async function getCategories() {
 	return data
 }
 
+async function getTags(){
+	const endpoint = '/tags'
+
+	const url = `${process.env.WP_URL}${endpoint}`
+
+	const res = await fetch(url)
+
+	let data
+	if (!res.ok) {
+		console.log({ '----- FETCH ERROR': res })
+		return (data = [])
+	}
+
+	data = await res.json()
+
+	console.log(data)
+	return data
+}
+
+
 export default async function loader(){
 	const posts = await getPosts();
 	const users = await getUsers();
 	const categories = await getCategories();
+	const tags = await getTags()
 
 	let articules = [];
 	
@@ -61,12 +82,15 @@ export default async function loader(){
 	let categorieArticule = categories.findIndex((categorie) => categorie.id == post.categories)
 	let categorieName = categories[categorieArticule].name
 
+	let tagArticule = tags.findIndex((tag) => tag.id == post.tags)
+	// let tagName = tags[tagArticule].name
+
 	let articulo = {
 		id: post.id,
 		title: post.title.rendered,
 		excerpt: post.excerpt.rendered,
 		user: userName,
-		categories: categorieName
+		categories: categorieName,
 	}
 
 	articules.push(articulo)
