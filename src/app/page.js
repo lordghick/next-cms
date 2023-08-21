@@ -1,7 +1,4 @@
-// import ImageSlider from "../components/ImageSlider";
-
 import Link from 'next/link'
-
 import Header from './components/Header'
 import ImageSlider from './components/ImageSlider'
 import { RiArrowRightSLine } from 'react-icons/ri'
@@ -17,16 +14,16 @@ export const metadata = {
 }
 
 async function page() {
-	const data = await getPosts()
+	const articulos = await getPosts()
 
-	const articulo = data[0]	
+	const articuloPortada = articulos[0];	
 
 	return (
-		<div className='bg-gray-100 min-h-screen'>
+		<div className='bg-gray-200 min-h-screen'>
 			<Header />
 
-			<div className='container max-w-sm md:max-w-2xl lg:max-w-6xl bg-white mx-auto my-8 shadow-lg min-h-[450px] rounded-lg p-2'>
-				<ImageSlider articulo={articulo} />
+			<div className='container max-w-sm md:max-w-2xl lg:max-w-6xl bg-white cursor-pointer duration-300 mx-auto my-8 shadow-lg min-h-[450px] rounded-lg p-2'>
+				<ImageSlider articulo={articuloPortada} />
 			</div>
 
 			<div className='container px-4 md:px-0 max-w-sm md:max-w-2xl lg:max-w-6xl mx-auto mb-8'>
@@ -36,24 +33,24 @@ async function page() {
 
 			{/* main */}
 
-			<InfiniteScrollMain />
+			<InfiniteScrollMain articulos={articulos} />
 
 			<div className='container max-w-6xl mx-auto flex items-center justify-center pb-8'>
 				<Link
 					href='/'
-					className='flex items-center gap-1 bg-black px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition-colors duration-300  text-yellow-500 uppercase font-bold'
+					className='flex items-center gap-1 font-medium bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-400 transition-colors'
 				>
 					Older Post <RiArrowRightSLine />
 				</Link>
 			</div>
 
 			<div className='shadow-lg container max-w-6xl mx-auto min-h-[300px] mb-8 bg-[url(https://cdna.artstation.com/p/assets/images/images/029/181/430/4k/anthony-catillaz-untitled-2.jpg?1596708920)] bg-no-repeat bg-cover bg-bottom rounded-lg border-8 border-white flex flex-col items-center justify-center gap-6 text-yellow-500 uppercase font-bold'>
-				<h4 className='text-2xl'>Stay in the Loop</h4>
-				<p className='text-lg'>Subscribe to my newsletter for all the latest updates</p>
+				<h4 className='text-2xl '>Stay in the Loop</h4>
+				<p className='text-md text-center'>Subscribe to my newsletter for all the latest updates</p>
 
 				<Link
 					href='/'
-					className='flex items-center gap-1 bg-black px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition-colors duration-300'
+					className='flex items-center gap-1 font-medium bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-400 transition-colors'
 				>
 					Subscribe <RiSendPlaneFill />
 				</Link>
