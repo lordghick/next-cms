@@ -1,4 +1,4 @@
-import GetPathName from "./GetPathName"
+import GetPathName from "./components/BlogDisplay"
 
 async function getPosts() {
 	const endpoint = '/posts'

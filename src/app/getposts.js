@@ -1,5 +1,5 @@
-async function getPosts() {
-	const endpoint = '/posts'
+export async function getPosts(extrapoint = '') {
+	const endpoint = '/posts?per_page=6'
 
 	const url = `${process.env.WP_URL}${endpoint}`
 
@@ -67,11 +67,11 @@ async function getTags(){
 }
 
 
-export default async function loader(){
-	const posts = await getPosts();
+export default async function loader(extrapoint){
+	const posts = await getPosts(extrapoint);
 	const users = await getUsers();
-	const categories = await getCategories();
-	const tags = await getTags()
+	// const categories = await getCategories();
+	// const tags = await getTags()
 
 	let articules = [];
 	
