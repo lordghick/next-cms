@@ -10,7 +10,7 @@ async function AsideCard({ articulo }) {
   return (
     <Link
       href="/"
-      className="flex items-center justify-between lg:justify-between hover:bg-gray-100 transition-all p-4 rounded-lg"
+      className="flex items-center justify-between lg:justify-between hover:bg-gray-300 transition-all p-4 rounded-lg"
     >
       <Image
         src={profilePic}

@@ -22,11 +22,14 @@ import {
 
 // Importaciones React Icons
 import profilePic from "../../../../public/chica.jpg";
+// Importacion de Data
 
-// import getServerSideProps from '../../router'
+import getPosts from "../../getSinglePost";
 
-function page() {
-  // let articulo = getServerSideProps();
+async function page() {
+  
+  const articulos = await getPosts();
+
   return (
     <div className="bg-gray-200 flex flex-col">
       <div className="container mx-auto max-w-sm md:max-w-2xl lg:max-w-6xl">
@@ -41,7 +44,7 @@ function page() {
             />
 
             <h1 className="text-slate-900 text-2xl md:text-4xl font-semibold text-center">
-              Dead Space Remake
+              {articulos.title}
             </h1>
 
             <p className="flex flex-col md:flex-row gap-2 items-center">

@@ -18,11 +18,11 @@ export default async function Card({ articulo }) {
     <Link
       href={{
         pathname: `/blog/${articulo.slug}`,
-        query: articulo.slug
+        query: articulo.slug,
       }}
       className="flex items-center justify-center min-h-[550px]"
     >
-      <div className="w-full h-full flex flex-col rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-100 transition-color duration-300">
+      <div className="w-full h-full flex flex-col rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-300 transition-color duration-300">
         <div className="flex w-full rounded-lg md:min-h-1/2 lg:min-h-[200px]">
           <Image
             src={coverImage}
@@ -32,7 +32,9 @@ export default async function Card({ articulo }) {
         </div>
 
         <div className="py-4 pl-20 pr-4 relative flex flex-col justify-between h-full ">
-          <h3 className="font-bold text-lg mb-2 capitalize">{articulo.title}</h3>
+          <h3 className="font-bold text-lg mb-2 capitalize">
+            {articulo.title}
+          </h3>
 
           <div className="text-sm my-4">
             <p className="text-gray-600 leading-none">
@@ -46,39 +48,32 @@ export default async function Card({ articulo }) {
             className="text-gray-400 text-md text-justify pb-4"
           ></p>
 
-          <BtnContinue slug={articulo.slug}  />
+          <BtnContinue slug={articulo.slug} />
 
           <div className="flex flex-col items-center gap-2 absolute top-0 left-0 pl-4 mt-[-24px]">
-            <Link href="/">
-              <Image
-                src={profilePic}
-                alt=""
-                className="w-14 h-14 rounded-full mr-2 object-cover border-4 border-white"
-              />
-            </Link>
+            <Image
+              src={profilePic}
+              alt=""
+              className="w-14 h-14 rounded-full mr-2 object-cover border-4 border-white"
+            />
 
-            <Link href="/">
-              <Image
-                src={instagramIcon}
-                alt=""
-                className="w-10 h-10 rounded-full mr-2 object-cover border-2 border-white"
-              />
-            </Link>
-            <Link href="/">
-              <Image
-                src={facebookIcon}
-                alt=""
-                className="w-10 h-10 rounded-full mr-2 object-cover border-2 border-white"
-              />
-            </Link>
+            <Image
+              src={instagramIcon}
+              alt=""
+              className="w-10 h-10 rounded-full mr-2 object-cover border-2 border-white"
+            />
 
-            <Link href="/">
-              <Image
-                src={twitterIcon}
-                alt=""
-                className="w-10 h-10 rounded-full mr-2 object-cover border-2 border-white"
-              />
-            </Link>
+            <Image
+              src={facebookIcon}
+              alt=""
+              className="w-10 h-10 rounded-full mr-2 object-cover border-2 border-white"
+            />
+
+            <Image
+              src={twitterIcon}
+              alt=""
+              className="w-10 h-10 rounded-full mr-2 object-cover border-2 border-white"
+            />
           </div>
         </div>
       </div>
