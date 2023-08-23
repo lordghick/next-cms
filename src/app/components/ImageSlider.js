@@ -1,6 +1,11 @@
+// Importaciones de Next
 import Link from "next/link";
 import Image from "next/image";
+
+// Importaciones de Componentes
 import BtnContinue from "./BtnContinue";
+
+// Importaciones de Public
 import coverImage from "../../../public/9ab13ffeb27edbe7cfdbe08efb61abf927c4d370-scaled.jpg";
 import profilePic from '../../../public/chica.jpg'
 
@@ -30,7 +35,7 @@ export default async function ImageSlider({ articulo }) {
 
         <h2
           id="titulo"
-          className="text-slate-900 text-2xl md:text-4xl font-semibold"
+          className="text-slate-900 text-2xl md:text-4xl font-semibold capitalize"
         >
           {articulo.title}
         </h2>

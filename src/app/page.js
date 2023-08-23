@@ -1,19 +1,28 @@
+// Importaciones de Next
+
 import Link from "next/link";
+
+// Importaciones de Componentes
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
-import { RiArrowRightSLine } from "react-icons/ri";
-import {
-  RiSendPlaneFill,
-} from "react-icons/ri";
 import InfiniteScrollMain from "./components/InfiniteScrollMain";
 
+// Importaciones React Icons
+
+import { RiArrowRightSLine, RiSendPlaneFill, } from "react-icons/ri";
+
+// Importacion de Data
+
 import getPosts from "./getposts";
-import Footer from "./components/Footer";
+
+// Metadata
 
 export const metadata = {
   title: "Home",
   description: "Home of the blog",
 };
+
 
 async function page() {
   const articulos = await getPosts();

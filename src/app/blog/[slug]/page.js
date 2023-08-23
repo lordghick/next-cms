@@ -1,9 +1,12 @@
+// Importaciones de Next
 import Link from "next/link";
 import Image from "next/image";
+
+// Importaciones de Componentes
 import BlogHeroImage from "../../components/BlogHeroImage";
-import profilePic from "../../../../public/chica.jpg";
 import YouALsoLikeCard from "../../components/YouALsoLikeCard";
 
+// Importaciones React Icons
 import {
   RiTimeLine,
   RiEyeLine,
@@ -17,8 +20,13 @@ import {
   RiDiscordFill,
 } from "react-icons/ri";
 
+// Importaciones React Icons
+import profilePic from "../../../../public/chica.jpg";
+
+// import getServerSideProps from '../../router'
 
 function page() {
+  // let articulo = getServerSideProps();
   return (
     <div className="bg-gray-200 flex flex-col">
       <div className="container mx-auto max-w-sm md:max-w-2xl lg:max-w-6xl">
@@ -33,7 +41,7 @@ function page() {
             />
 
             <h1 className="text-slate-900 text-2xl md:text-4xl font-semibold text-center">
-              Dead Space contará con un spin off de lo más inesperado
+              Dead Space Remake
             </h1>
 
             <p className="flex flex-col md:flex-row gap-2 items-center">

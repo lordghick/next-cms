@@ -1,13 +1,22 @@
+// Importaciones de Next
 import Link from "next/link";
-import React from "react";
+import Image from "next/image";
+
+// Importaciones React Icons
 import { RiArrowRightSLine } from "react-icons/ri";
+
+// Importaciones de Public
+
+import YouAlsoLikePic from "../../../public/youalsolike.jpg";
+
 
 function YouALsoLikeCard() {
   return (
     <Link href="/">
       <div className="w-full bg-white shadow-md rounded-lg p-2 display flex flex-col md:flex-row items-center gap-2 mb-8">
-        <img
-          src="https://img2.rtve.es/v/6767318?w=1600&preview=1672433721010.jpg"
+        <Image
+          src={YouAlsoLikePic}
+          alt="Avatar of Jonathan Reinink"
           className="rounded-lg md:w-1/2"
         />
 

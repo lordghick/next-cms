@@ -1,4 +1,7 @@
+// Importaciones de Next
 import Link from "next/link";
+
+// Importaciones React Icons
 import { RiArrowRightSLine } from "react-icons/ri";
 
 function BtnContinue({slug}) {

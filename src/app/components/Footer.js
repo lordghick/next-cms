@@ -1,5 +1,10 @@
+// Importaciones de Next
 import Link from "next/link";
+
+// Importaciones de Componentes
 import BackToTopButton from "./BackToTopButton";
+
+// Importaciones React Icons
 import {
     RiFacebookCircleFill,
     RiTwitterFill,

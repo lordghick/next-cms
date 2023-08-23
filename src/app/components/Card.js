@@ -1,6 +1,11 @@
+// Importaciones de Next
 import Link from "next/link";
 import Image from "next/image";
+
+// Importaciones de Componentes
 import BtnContinue from "./BtnContinue";
+
+// Importaciones de Public
 import coverImage from "../../../public/9ab13ffeb27edbe7cfdbe08efb61abf927c4d370-scaled.jpg";
 import profilePic from "../../../public/chica.jpg";
 import instagramIcon from "../../../public/ig.webp";
@@ -11,7 +16,10 @@ export default async function Card({ articulo }) {
   let excerpt = { __html: articulo.excerpt };
   return (
     <Link
-      href={`/blog/${articulo.slug}`}
+      href={{
+        pathname: `/blog/${articulo.slug}`,
+        query: articulo.slug
+      }}
       className="flex items-center justify-center min-h-[550px]"
     >
       <div className="w-full h-full flex flex-col rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-100 transition-color duration-300">
@@ -24,7 +32,7 @@ export default async function Card({ articulo }) {
         </div>
 
         <div className="py-4 pl-20 pr-4 relative flex flex-col justify-between h-full ">
-          <h3 className="font-bold text-lg mb-2">{articulo.title}</h3>
+          <h3 className="font-bold text-lg mb-2 capitalize">{articulo.title}</h3>
 
           <div className="text-sm my-4">
             <p className="text-gray-600 leading-none">
@@ -38,7 +46,7 @@ export default async function Card({ articulo }) {
             className="text-gray-400 text-md text-justify pb-4"
           ></p>
 
-          <BtnContinue slug={articulo.slug} />
+          <BtnContinue slug={articulo.slug}  />
 
           <div className="flex flex-col items-center gap-2 absolute top-0 left-0 pl-4 mt-[-24px]">
             <Link href="/">

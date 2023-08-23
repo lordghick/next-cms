@@ -1,5 +1,9 @@
+// Importaciones de Next
 import Image from "next/image";
 import Link from "next/link";
+
+// Importaciones Public
+
 import profilePic from "../../../public/chica.jpg";
 
 async function AsideCard({ articulo }) {
@@ -18,7 +22,7 @@ async function AsideCard({ articulo }) {
         <span className="font-bold text-white bg-blue-500 min-w-[70px] max-w-[100px] text-center rounded-xl uppercase text-[8px] px-2 py-1">
           {articulo.categories}
         </span>
-        <h3 className="text-slate-900 text-[12px] font-semibold">
+        <h3 className="text-slate-900 text-[12px] font-semibold capitalize">
           {articulo.title}
         </h3>
 

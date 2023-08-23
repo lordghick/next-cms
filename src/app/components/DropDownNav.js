@@ -1,6 +1,10 @@
 "use client";
-import Link from "next/link";
+
+// Importaciones de React
 import React, { useState } from "react";
+
+// Importaciones de Next
+import Link from "next/link";
 
 function DropDownNav() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,11 @@
-import React from "react";
-import AsideCard from "./AsideCard";
+// Importaciones de Next
 import Link from "next/link";
+
+// Importaciones de Componentes
+import AsideCard from "./AsideCard";
+
+// Importaciones React Icons
+
 import {
   RiFacebookCircleFill,
   RiTwitterFill,
