@@ -10,7 +10,10 @@ import twitterIcon from "../../../public/Twitter.jpg";
 export default async function Card({ articulo }) {
   let excerpt = { __html: articulo.excerpt };
   return (
-    <Link href="/" className="flex items-center justify-center min-h-[550px]">
+    <Link
+      href={`/blog/${articulo.slug}`}
+      className="flex items-center justify-center min-h-[550px]"
+    >
       <div className="w-full h-full flex flex-col rounded-lg overflow-hidden shadow-lg p-3 bg-white hover:bg-gray-100 transition-color duration-300">
         <div className="flex w-full rounded-lg md:min-h-1/2 lg:min-h-[200px]">
           <Image
@@ -35,7 +38,7 @@ export default async function Card({ articulo }) {
             className="text-gray-400 text-md text-justify pb-4"
           ></p>
 
-          <BtnContinue />
+          <BtnContinue slug={articulo.slug} />
 
           <div className="flex flex-col items-center gap-2 absolute top-0 left-0 pl-4 mt-[-24px]">
             <Link href="/">

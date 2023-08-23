@@ -8,7 +8,7 @@ export default async function ImageSlider({ articulo }) {
   let excerpt = { __html: `${articulo.excerpt}` };
   return (
     <Link
-      href={`/${articulo.link}`}
+      href={`/blog/${articulo.slug}`}
       className="flex flex-col lg:flex-row items-center justify-between gap-2 lg:gap-8"
     >
       <div className="w-full lg:w-1/2 h-[300px] md:min-h-[450px]">
@@ -20,6 +20,7 @@ export default async function ImageSlider({ articulo }) {
       </div>
 
       <div className="lg:w-1/2 min-h-[450px] flex flex-col justify-evenly px-4 lg:pr-4">
+        
         <span
           id="categoria"
           className="font-bold text-white bg-blue-500 min-w-[70px] max-w-[100px] text-center rounded-xl uppercase text-xs px-2 py-1"
@@ -56,7 +57,7 @@ export default async function ImageSlider({ articulo }) {
           className="text-gray-400 text-lg font-semibold pb-4"
         ></p>
 
-        <BtnContinue />
+        <BtnContinue slug={articulo.slug} />
       </div>
     </Link>
   );

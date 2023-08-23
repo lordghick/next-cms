@@ -79,18 +79,12 @@ export default async function loader(){
 	let userArticule = users.findIndex((author) => author.id == post.author)
 	let userName = users[userArticule].name
 
-	let categorieArticule = categories.findIndex((categorie) => categorie.id == post.categories)
-	let categorieName = categories[categorieArticule].name
-
-	let tagArticule = tags.findIndex((tag) => tag.id == post.tags)
-	// let tagName = tags[tagArticule].name
-
 	let articulo = {
 		id: post.id,
 		title: post.title.rendered,
 		excerpt: post.excerpt.rendered,
 		user: userName,
-		categories: categorieName,
+		slug: post.slug
 	}
 
 	articules.push(articulo)
