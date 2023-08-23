@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import BlogHeroImage from "../components/BlogHeroImage";
-
+import profilePic from "../../../public/chica.jpg";
 import {
   RiTimeLine,
   RiEyeLine,
@@ -13,11 +13,11 @@ import {
   RiRedditFill,
   RiTelegramFill,
   RiDiscordFill,
-  RiArrowRightSLine,
 } from "react-icons/ri";
 import Link from "next/link";
 import BackToTopButton from "../components/BackToTopButton";
 import YouALsoLikeCard from "../components/YouALsoLikeCard";
+import Image from "next/image";
 
 function page() {
   return (
@@ -29,18 +29,19 @@ function page() {
           <BlogHeroImage />
 
           <article className="flex flex-col items-center gap-4 my-4 max-w-6xl mx-auto bg-white p-10 lg:p-2 lg:py-8 rounded-lg shadow-md lg:pb-40">
-            <img
-              className="w-14 h-14 rounded-full mr-2 object-cover border-4 border-blue-500 shadow-lg"
-              src="https://aishlatino.com/wp-content/uploads/2021/11/que-tipo-de-persona-te-gustaria-ser-730x411-SP.jpg"
+            <Image
+              src={profilePic}
               alt="Avatar of Jonathan Reinink"
+              className="w-14 h-14 rounded-full mr-2 object-cover border-4 border-blue-500 shadow-lg"
             />
+
             <h1 className="text-slate-900 text-2xl md:text-4xl font-semibold text-center">
               Dead Space contará con un spin off de lo más inesperado
             </h1>
 
             <p className="flex flex-col md:flex-row gap-2 items-center">
               by <span className="font-bold">Laura Dallas</span>Laura Dallas
-              March 28, 2022 <RiEyeLine />{" "}
+              March 28, 2022 <RiEyeLine />
               <span className="font-bold">0 views</span>
               <RiTimeLine className="" /> 2 min
             </p>
@@ -224,10 +225,10 @@ function page() {
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-center md:gap-4 w-full">
-                  <img
-                    className="w-20 h-20 md:w-36 md:h-36 rounded-full mr-2 object-cover border-8 border-blue-500"
-                    src="https://aishlatino.com/wp-content/uploads/2021/11/que-tipo-de-persona-te-gustaria-ser-730x411-SP.jpg"
+                  <Image
+                    src={profilePic}
                     alt="Avatar of Jonathan Reinink"
+                    className="w-20 h-20 md:w-36 md:h-36 rounded-full mr-2 object-cover border-8 border-blue-500"
                   />
 
                   <div className="flex flex-col items-start gap-2 md:max-w-[400px]">
