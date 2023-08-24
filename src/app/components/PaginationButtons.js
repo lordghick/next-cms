@@ -9,7 +9,7 @@ import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 export default function PaginationButtons() {
   const [array, setArray] = react.useState([]);
   const [currentPage, setCurrentPage] = react.useState(1);
-  var totalItems = 0;
+  let totalItems = 0;
   useEffect(() => {
     fetch(
       `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${currentPage}`
