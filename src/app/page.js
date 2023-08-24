@@ -15,7 +15,7 @@ import { RiArrowRightSLine, RiSendPlaneFill, } from "react-icons/ri";
 // Importacion de Data
 
 import getPosts from "./getposts";
-import PaginationButtons from "./PaginationButtons";
+import PaginationButtons from "./components/PaginationButtons";
 
 // Metadata
 
