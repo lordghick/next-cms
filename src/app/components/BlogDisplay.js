@@ -26,25 +26,25 @@ import profilePic from "../../../public/chica.jpg";
 
 import { usePathname } from "next/navigation";
 
-export default function BlogDisplay({item}) {
-  console.log(`item ${item}`)
+export default function BlogDisplay({ item }) {
+  console.log(`item ${item}`);
   const pathname = usePathname();
   let newString = pathname.slice(pathname.lastIndexOf("/") + 1);
-  console.log(`este es el string ${newString}`)
-  let post = item.findIndex((posts) => posts.slug == newString)
-  console.log(`el supuesto id ${post}`)
-	let postId= item[post]
+  console.log(`este es el string ${newString}`);
+  let post = item.findIndex((posts) => posts.slug == newString);
+  console.log(`el supuesto id ${post}`);
+  let postId = item[post];
 
-	// let userArticule = users.findIndex((author) => author.id == postId.author)
-	// let userName = users[userArticule].name
+  // let userArticule = users.findIndex((author) => author.id == postId.author)
+  // let userName = users[userArticule].name
 
-	let articulo = {
-		id: postId.id,
-		title: postId.title.rendered,
-		excerpt: postId.excerpt.rendered,
-		// user: userName,
-		slug: postId.slug
-}
+  let articulo = {
+    id: postId.id,
+    title: postId.title.rendered,
+    excerpt: postId.excerpt.rendered,
+    // user: userName,
+    slug: postId.slug,
+  };
   return (
     <div className="bg-gray-200 flex flex-col">
       <div className="container mx-auto max-w-sm md:max-w-2xl lg:max-w-6xl">
@@ -108,26 +108,7 @@ export default function BlogDisplay({item}) {
             {/* Aqui comienza el Contenido del blog */}
 
             <section className="mt-4 w-full md:max-w-3xl mx-auto flex flex-col gap-8 text-lg">
-              <p className="">
-                Its sometimes her behaviour are contented. Do listening am
-                eagerness oh objection collected. Together happy feelings
-                continue juvenile had off one. Unknown may service subject her
-                letters one bed.
-              </p>
-
-              <p>
-                Oh acceptance apartments up sympathize astonished delightful.
-                Waiting him new lasting towards. Continuing melancholy
-                especially so to. Me unpleasing impossible in attachment
-                announcing so astonished.
-              </p>
-
-              <p>
-                Pianoforte solicitude so decisively unpleasing conviction is
-                partiality he. Or particular so diminution entreaties oh do.
-                Real he me fond show gave shot plan. Mean are sons too sold nor
-                said. Son share three men power boy you
-              </p>
+              <p className="">{articulo.content}</p>
 
               <h5 className="text-slate-900 text-xl md:text-2xl font-semibold self-start">
                 Me unpleasing impossible
